@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true  // Add this to recognize Node.js global variables
     },
     "extends": [
         "eslint:recommended",
@@ -13,16 +14,13 @@ module.exports = {
                 "node": true
             },
             "files": [
-                ".eslintrc.{js,cjs}",
-                "db-config.js",
-                "jest.config.js",
-                "knexfile.js"
+                ".eslintrc.{js,cjs}"
             ],
             "parserOptions": {
                 "sourceType": "script"
             }
         }
-    ],    
+    ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -33,3 +31,4 @@ module.exports = {
     "rules": {
     }
 }
+
