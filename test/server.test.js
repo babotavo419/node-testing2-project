@@ -33,7 +33,6 @@ describe('Server', () => {
     });
 });
 
-// Close the server after tests run
-afterAll(() => {
-    server.close();
+afterAll(done => {
+    server.close(done);
 });
