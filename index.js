@@ -1,9 +1,8 @@
 const express = require('express');
 const db = require('./db-config');
+const app = express();
 
-const server = express();
-
-server.use(express.json()); // Middleware for parsing JSON request bodies
+app.use(express.json()); // Middleware for parsing JSON request bodies
 
 server.get('/', (req, res) => {
     res.status(200).json({ message: "API is up and running!" });
@@ -19,11 +18,10 @@ server.get('/items', async (req, res) => {
     }
 });
 
-// You can add more endpoints as required.
 
 const PORT = process.env.PORT || 4000;
 
-server.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}...`);
 });
 

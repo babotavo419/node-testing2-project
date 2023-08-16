@@ -2,7 +2,8 @@ module.exports = {
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true  // Add this to recognize Node.js global variables
+        "jest": true,
+        "node": true,
     },
     "extends": [
         "eslint:recommended",
